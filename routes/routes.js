@@ -52,7 +52,7 @@ module.exports = function(router) {
     });
   });
   res.redirect("/");
-  })
+  });
 
   router.post("/saved/:id", function(req, res) {
 	  Article.update({_id: req.params.id}, {$set: {saved: true}}, function(err, doc) {

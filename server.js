@@ -2,6 +2,7 @@ var express = require('express')
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var logger = require("morgan");
+var exphbs = require("express-handlebars");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
@@ -26,8 +27,6 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 var db = mongoose.connection;
-
-var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
