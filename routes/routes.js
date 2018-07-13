@@ -36,7 +36,7 @@ module.exports = function(router) {
 
       var result = {};
       result.title = $(this).children("a").text();
-      result.link =  $(this).children("a").attr("href");
+      result.link = "http://www.foxnews.com" + $(this).children("a").attr("href");
 
       var entry = new Article(result);
 
