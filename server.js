@@ -5,6 +5,7 @@ var logger = require("morgan");
 var exphbs = require("express-handlebars");
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
+var index = require("./models/index.js");
 
 var app = express()
 
@@ -35,6 +36,6 @@ db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
 
-app.listen(process.env.PORT || 5000, function() {
-  console.log("App running on port 5000!");
+app.listen(process.env.PORT || 3000, function() {
+  console.log("App running on port 3000!");
 });
